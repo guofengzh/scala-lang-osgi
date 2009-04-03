@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.scala-lang-osgi</groupId>
+    <artifactId>scala-lang-osgi</artifactId>
+    <version>2.7.3</version>
+  </parent>
+
+  <groupId>org.scala-lang-osgi</groupId>
+  <artifactId>scala-library</artifactId>
+  <name>scala-library</name>
+  <description>OSGi-fied version of scala-library.</description>
+  <version>${scala.version}</version>
+  <packaging>bundle</packaging>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-library</artifactId>
+      <version>${scala.version}</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <configuration>
+          <instructions>
+            <Export-Package>scala.*;version=${scala.version}</Export-Package>
+            <DynamicImport-Package>*</DynamicImport-Package>
+            <Include-Resource>../scala-license.txt</Include-Resource>
+            <_nouses>true</_nouses>
+          </instructions>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.scala-lang-osgi</groupId>
+  <artifactId>scala-lang-osgi</artifactId>
+  <name>scala-lang-osgi</name>
+  <description>Root for OSGi-fied Scala libraries.</description>
+  <version>2.7.3</version>
+  <packaging>pom</packaging>
+
+  <organization>
+    <name>The Scala Programming Language</name>
+    <url>http://www.scala-lang.org</url>
+  </organization>
+  <licenses>
+    <license>
+      <name>SCALA LICENSE</name>
+      <url>http://www.scala-lang.org/node/146</url>
+    </license>
+  </licenses>
+
+  <modules>
+    <module>scala-library</module>
+  </modules>
+
+  <properties>
+    <scala.version>2.7.3</scala.version>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Bundle-RequiredExecutionEnvironment>J2SE-1.5</Bundle-RequiredExecutionEnvironment>
+            <_versionpolicy>[$(version;==;$(@)),$(version;=+;$(@)))</_versionpolicy>
+          </instructions>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <repositories>
+    <repository>
+      <id>scala-tools-releases</id>
+      <name>Scala-Tools Maven2 Repository</name>
+      <url>http://scala-tools.org/repo-releases</url>
+    </repository>
+  </repositories>
+
+</project>

@@ -1,0 +1,10 @@
+.DS_Store
+.classpath
+.launch
+.manager
+.metadata
+.project
+.settings
+.svn
+runner
+target
