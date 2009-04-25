@@ -25,6 +25,7 @@
     <module>scala-library</module>
     <module>scala-swing</module>
     <module>scala-dbc</module>
+    <module>scala-compiler</module>
   </modules>
 
   <properties>
