@@ -1,0 +1,10 @@
+# Install Pax Runner from http://wiki.ops4j.org/display/paxrunner/Pax+Runner
+# and add bin directory to path.
+
+REPO=http://scala-tools.org/repo-releases
+GROUP=org.scala-lang-osgi
+VERSION=2.7.4
+pax-run.sh scan-bundle:mvn:$REPO!$GROUP/scala-library/$VERSION \
+           scan-bundle:mvn:$REPO!$GROUP/scala-dbc/$VERSION \
+           scan-bundle:mvn:$REPO!$GROUP/scala-swing/$VERSION \
+           scan-bundle:mvn:$REPO!$GROUP/scala-compiler/$VERSION
