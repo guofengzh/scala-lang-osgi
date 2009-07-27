@@ -30,6 +30,7 @@
 
   <properties>
     <scala.version>2.7.5</scala.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
   <build>
@@ -43,6 +44,13 @@
             <Bundle-RequiredExecutionEnvironment>J2SE-1.5</Bundle-RequiredExecutionEnvironment>
             <_versionpolicy>[$(@),$(version;=+;$(@)))</_versionpolicy>
           </instructions>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <configuration>
+          <encoding>${project.build.sourceEncoding}</encoding>
         </configuration>
       </plugin>
     </plugins>
