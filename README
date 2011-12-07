@@ -1,0 +1,33 @@
+scala-lang-osgi add the required information to the MANIFEST.MF so that scala-library, scala-compiler, scala-jdbc or scala-swing can be used as a bundle in OSGi environment.
+
+Bundle-SymbolicName
+
+org.scala-lang-osgi.scala-library for scala-library
+org.scala-lang-osgi.scala-compiler for scala-compiler
+org.scala-lang-osgi.scala-dbc for scala-jdbc
+org.scala-lang-osgi.scala-swing for scala-swing
+
+Currently these jars are not deployed to any Maven repository, you need to check out the project, build it youself by run
+    mvn install
+then add one or all of them to your Maven POM file:
+
+<dependency>
+  <groupId>org.scala-lang-osgi</groupId>
+  <artifactId>scala-library</artifactId>
+  <version>2.9.1</version>
+</dependency>
+<dependency>
+  <groupId>org.scala-lang-osgi</groupId>
+  <artifactId>scala-compiler</artifactId>
+  <version>2.9.1</version>
+</dependency>
+<dependency>
+  <groupId>org.scala-lang-osgi</groupId>
+  <artifactId>scala-jdbc</artifactId>
+  <version>2.9.1</version>
+</dependency>
+<dependency>
+  <groupId>org.scala-lang-osgi</groupId>
+  <artifactId>scala-swing</artifactId>
+  <version>2.9.1</version>
+</dependency>
