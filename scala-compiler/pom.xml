@@ -19,11 +19,6 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.scala-lang-osgi</groupId>
-      <artifactId>scala-library</artifactId>
-      <version>${scala.version}</version>
-    </dependency>
-    <dependency>
       <groupId>org.scala-lang</groupId>
       <artifactId>scala-compiler</artifactId>
     </dependency>
@@ -40,6 +35,7 @@
             <Import-Package>org.apache.tools.ant.*;resolution:=optional,*</Import-Package>
             <DynamicImport-Package>*</DynamicImport-Package>
             <Include-Resource>../scala-license.txt,jline-license.txt</Include-Resource>
+            <Embed-Dependency>*;inline=true</Embed-Dependency>
             <_nouses>false</_nouses>
           </instructions>
         </configuration>

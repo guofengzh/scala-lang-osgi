@@ -34,6 +34,7 @@
             <Export-Package>scala.*;version=${scala.version}</Export-Package>
             <DynamicImport-Package>*</DynamicImport-Package>
             <Include-Resource>../scala-license.txt</Include-Resource>
+            <Embed-Dependency>*;inline=true</Embed-Dependency>
             <_nouses>true</_nouses>
           </instructions>
         </configuration>
