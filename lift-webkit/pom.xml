@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.scala-lang-osgi</groupId>
+    <artifactId>scala-lang-osgi</artifactId>
+    <version>2.9.1</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <groupId>net.liftweb-osgi</groupId>
+  <artifactId>lift-webkit_2.9.1</artifactId>
+  <name>lift-webkit</name>
+  <description>OSGi-fied version of lift-webkit_2</description>
+  <version>2.4-RC1</version>
+  <packaging>bundle</packaging>
+
+  <dependencies>
+    <dependency>
+      <groupId>net.liftweb</groupId>
+      <artifactId>lift-webkit_${scala.version}</artifactId>
+      <version>${lift.version}</version>
+      <exclusions>
+         <exclusion>
+            <groupId>net.liftweb</groupId>
+            <artifactId>lift-util_${scala.version}</artifactId>
+         </exclusion>
+      </exclusions>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <configuration>
+          <instructions>
+            <Export-Package>
+               net.liftweb.*;version=${lift.version}
+            </Export-Package>
+            <Import-Package>
+               !net.liftweb.mocks.*,
+               !org.specs.*,
+               !org.slf4j;version="[1.6.1,1.7)",
+               *
+            </Import-Package>
+            <Embed-Dependency>*;inline=true</Embed-Dependency>
+            <DynamicImport-Package>*</DynamicImport-Package>
+            <_nouses>true</_nouses>
+          </instructions>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
