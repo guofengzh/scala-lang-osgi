@@ -26,10 +26,15 @@
     <module>scala-swing</module>
     <module>scala-dbc</module>
     <module>scala-compiler</module>
+    <module>scalap</module>
+    <module>lift-webkit</module>
+    <module>lift-common</module>
+    <module>lift-util</module>
   </modules>
 
   <properties>
     <scala.version>2.9.1</scala.version>
+    <lift.version>2.4-RC1</lift.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
