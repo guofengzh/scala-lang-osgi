@@ -14,20 +14,20 @@ then add one or all of them to your Maven POM file:
 <dependency>
   <groupId>org.scala-lang-osgi</groupId>
   <artifactId>scala-library</artifactId>
-  <version>2.9.1</version>
+  <version>2.9.2</version>
 </dependency>
 <dependency>
   <groupId>org.scala-lang-osgi</groupId>
   <artifactId>scala-compiler</artifactId>
-  <version>2.9.1</version>
+  <version>2.9.2</version>
 </dependency>
 <dependency>
   <groupId>org.scala-lang-osgi</groupId>
   <artifactId>scala-jdbc</artifactId>
-  <version>2.9.1</version>
+  <version>2.9.2</version>
 </dependency>
 <dependency>
   <groupId>org.scala-lang-osgi</groupId>
   <artifactId>scala-swing</artifactId>
-  <version>2.9.1</version>
+  <version>2.9.2</version>
 </dependency>

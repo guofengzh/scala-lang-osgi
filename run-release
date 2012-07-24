@@ -3,7 +3,7 @@
 
 REPO=http://scala-tools.org/repo-releases
 GROUP=org.scala-lang-osgi
-VERSION=2.9.1
+VERSION=2.9.2
 pax-run.sh scan-bundle:mvn:$REPO!$GROUP/scala-library/$VERSION \
            scan-bundle:mvn:$REPO!$GROUP/scala-dbc/$VERSION \
            scan-bundle:mvn:$REPO!$GROUP/scala-swing/$VERSION \
