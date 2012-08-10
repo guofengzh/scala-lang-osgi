@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.scala-lang-osgi</groupId>
     <artifactId>scala-lang-osgi</artifactId>
-    <version>2.9.2</version>
+    <version>2.10.0-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
@@ -22,6 +22,10 @@
       <groupId>org.scala-lang</groupId>
       <artifactId>scala-compiler</artifactId>
     </dependency>
+    <dependency>
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-reflect</artifactId>
+    </dependency>
   </dependencies>
 
   <build>
@@ -31,7 +35,7 @@
         <artifactId>maven-bundle-plugin</artifactId>
         <configuration>
           <instructions>
-            <Export-Package>scala.tools.*;version=${scala.version},ch.epfl.lamp.*;version=${scala.version}</Export-Package>
+            <Export-Package>scala.tools.*;version=${scala.version};-split-package:=merge-first,ch.epfl.lamp.*;version=${scala.version}</Export-Package>
             <Import-Package>
                !scala.tools.jline.*,
                org.apache.tools.ant.*;resolution:=optional,*
