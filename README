@@ -29,3 +29,5 @@ then add one or all of them to your Maven POM file:
   <artifactId>scala-swing</artifactId>
   <version>${scala.version}</version>
 </dependency>
+
+TODO: scala-actors-migration, version number in Fragment-Host
