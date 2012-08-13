@@ -38,6 +38,7 @@
             <Export-Package>scala.tools.*;version=${scala.version};-split-package:=merge-first,ch.epfl.lamp.*;version=${scala.version}</Export-Package>
             <Import-Package>
                !scala.tools.jline.*,
+               !sun.misc,
                org.apache.tools.ant.*;resolution:=optional,*
             </Import-Package>
             <DynamicImport-Package>*</DynamicImport-Package>
