@@ -73,6 +73,8 @@
         <configuration>
           <instructions>
             <Bundle-RequiredExecutionEnvironment>J2SE-1.5</Bundle-RequiredExecutionEnvironment>
+            <Import-Package>!sun.misc,*</Import-Package>
+            <Ignore-Package>sun.misc</Ignore-Package>
             <_versionpolicy>[$(@),$(version;=+;$(@)))</_versionpolicy>
           </instructions>
         </configuration>
