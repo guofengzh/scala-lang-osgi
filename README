@@ -11,7 +11,7 @@ Currently these jars are not deployed to any Maven repository, you need to check
 then add one or all of them to your Maven POM file:
 
 <properties>
-    <scala.version>2.10.0-SNAPSHOT</scala.version>
+    <scala.version>2.10.0</scala.version>
 </properties>
 
 <dependency>
@@ -29,5 +29,3 @@ then add one or all of them to your Maven POM file:
   <artifactId>scala-swing</artifactId>
   <version>${scala.version}</version>
 </dependency>
-
-TODO: scala-actors-migration, version number in Fragment-Host

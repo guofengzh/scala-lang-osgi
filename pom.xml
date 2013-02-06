@@ -22,17 +22,15 @@
   </licenses>
 
   <modules>
-    <!--module>scala-compiler</module-->
+    <module>scala-compiler</module>
     <module>scala-library</module>
     <module>scala-reflect</module>
     <module>scala-swing</module>
-    <module>scala-actors</module>
-    <module>scala-actors-migration</module>
     <module>scalap</module>
   </modules>
 
   <properties>
-    <scala.version>2.10.0-SNAPSHOT</scala.version>
+    <scala.version>2.10.0</scala.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
@@ -68,18 +66,6 @@
       <dependency>
         <groupId>org.scala-lang</groupId>
         <artifactId>scala-reflect</artifactId>
-        <version>${scala.version}</version>
-        <scope>provided</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.scala-lang</groupId>
-        <artifactId>scala-actors</artifactId>
-        <version>${scala.version}</version>
-        <scope>provided</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.scala-lang</groupId>
-        <artifactId>scala-actors-migration</artifactId>
         <version>${scala.version}</version>
         <scope>provided</scope>
       </dependency>
