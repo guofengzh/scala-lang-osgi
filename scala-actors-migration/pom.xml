@@ -33,7 +33,7 @@
         <configuration>
           <instructions>
             <Export-Package>scala.actors.*;version=${scala.version};-split-package:=first</Export-Package>
-            <Fragment-Host>org.scala-lang-osgi.scala-actors;bundle-version=2.10.0</Fragment-Host> <!-- TODO: for versoin definition -->
+            <Fragment-Host>org.scala-lang-osgi.scala-actors;bundle-version=${scala.version}</Fragment-Host> <!-- TODO: for versoin definition -->
             <DynamicImport-Package>*</DynamicImport-Package>
             <Include-Resource>../scala-license.txt</Include-Resource>
             <Embed-Dependency>*;inline=true</Embed-Dependency>
